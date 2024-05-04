@@ -1,0 +1,3 @@
+> Abrir arquivo no Chrome - Ctrl + O
+> Salvar arquivo no Sublime - Ctrl + S
+> Novo arquivo no Sublime - Ctrl + N

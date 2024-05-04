@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<script type="text/javascript">
+	
+	function pulaLinha() {
+
+		document.write("<br>");
+	}
+
+	function print(texto) {
+
+		document.write(texto);
+		pulaLinha();
+	}
+
+	alert("Olá! Esse programa calcula qualquer tabuada que você deseja!");
+
+	var tabuada = parseInt(prompt("Digite um número que deseja saber a tabuada:"));
+	var limiteTabuada = parseInt(prompt("Digite um número limite da tabuada (Ex: '10' para ir até 10):"));
+
+	print("Esta é a tabuada do " + tabuada + ":<br>")
+
+	for(var multiplicador = 1; multiplicador <= limiteTabuada; multiplicador++) {
+
+		print(tabuada + " x " + multiplicador + " = " + (tabuada * multiplicador));
+	}
+
+	print("<br>Recarregue a página para outra tabuada.")
+	
+</script>

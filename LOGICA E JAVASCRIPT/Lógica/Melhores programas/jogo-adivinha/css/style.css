@@ -1,0 +1,160 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Game Over", monospace;
+}
+
+/*index*/
+.container1{
+	display: grid;
+	height: 100vh;
+	width: 100vw;
+	background-image: url("../img/fundo-jogo.png");
+	background-size: cover;
+	grid-template-rows: repeat(2, 1fr);
+	padding: 10vw;
+	row-gap: 20px;
+	
+}
+
+.container1:nth-child(1) {
+	grid-row: span 1;
+}
+
+.container1:nth-child(2) {
+	align-items: center;
+	grid-row: span 1;
+}
+
+.texto {
+	background-color: rgb(194, 158, 215);
+	height: fit-content;
+	padding: 2vh 0.5vw;
+	text-align: center;
+	font-size: 1.5rem;
+	box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+span {
+	font-weight: bolder;
+}
+
+.play {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#jogar {
+	background-color: #eef5f9;
+	padding: 1vh 10vw;
+	height: fit-content;
+	text-align: center;
+	font-size: 3rem;
+	font-weight: bolder;
+	filter: drop-shadow(5px 5px rgba(0, 0, 0, 0.5));
+	border-style: none;
+	border-radius: 10px;
+}
+
+#jogar:hover {
+	cursor: pointer;
+	opacity: 0.8;
+	transition: all 0.2s ease-in-out;
+}
+
+/*jogo_adivinha*/
+.container2{
+	display: grid;
+	height: 100vh;
+	width: 100vw;
+	background-image: url("../img/fundo-jogo.png");
+	background-size: cover;
+	grid-template-rows: repeat(2, 1fr);
+	padding: 2vh 0;
+}
+
+.container2:nth-child(1) {
+	grid-row: span 1;
+}
+
+.container2:nth-child(2) {
+	grid-row: span 1;
+}
+
+.botoes {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+button {
+	padding: 2vh;
+	height: fit-content;
+	width: fit-content;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: bolder;
+	filter: drop-shadow(5px 5px rgba(0, 0, 0, 0.5));
+	border-style: none;
+	border-radius: 10px;
+}
+
+#rodar {
+	margin: 10px 20vw;
+	background-color: lightgreen;
+}
+
+#voltar {
+	margin: 15vh 20vw 0 20vw;
+	background-color: #eef5f9;
+}
+
+#recarregar {
+	margin: 15px 20vw;
+	background-color: purple;
+	color: #eef5f0;
+}
+
+button:hover {
+	cursor: pointer;
+	opacity: 0.8;
+	transition: all 0.2s ease-in-out;
+}
+
+#chute {
+	padding: 1vh 10vw;
+	text-align: center;
+	font-size: 5rem;
+	font-weight: bolder;
+	filter: drop-shadow(5px 5px rgba(0, 0, 0, 0.5));
+	border-radius: 70px;
+	margin-inline: 15px;
+	margin-top: 5vh;
+}
+
+.input {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+/* Estilizando as setas de seleção */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+}
+
+input[type="number"] {
+    border: 1px solid #ddd;
+}
+
+#setas {
+	margin-top: 10px;
+	background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    cursor: pointer;
+}

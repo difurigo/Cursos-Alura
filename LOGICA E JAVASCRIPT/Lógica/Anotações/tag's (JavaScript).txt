@@ -1,0 +1,9 @@
+=> Para criar textos em Java ""
+=> <script></script> [Dar a pista de que é outra linguagem de programação]
+
+Funções:
+=> alert(); [Serve para fazer um pop-up, e é assim que se escreve um código em Java Script]
+=> document.write(); [Serve para escrever um HTML no mundo JavaScript]
+
+Termos:
+Quando falamos de texto - "string"

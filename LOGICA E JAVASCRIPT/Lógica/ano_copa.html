@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<script type="text/javascript">
+	
+	function pulaLinha() {
+
+		document.write("<br><br>");
+	}
+
+	function print(texto) {
+
+		document.write(texto);
+		pulaLinha();
+	}
+
+	alert("Esse programa imprime todos os anos que tiveram e terão copa!");
+
+	var dataLimite = parseInt(prompt("Informe uma data limite:"));
+	var anoCopa = 1930;
+
+	while(anoCopa <= dataLimite) {
+
+		print("Teve copa no ano de " + anoCopa);
+
+		anoCopa = anoCopa + 4;
+	}
+
+	print("Esses foram os anos de copa até " + dataLimite)
+	
+</script>

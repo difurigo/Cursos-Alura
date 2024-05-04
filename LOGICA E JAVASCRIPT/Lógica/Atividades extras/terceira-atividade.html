@@ -1,0 +1,26 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+
+	function pulaLinha() {
+		
+		document.write("<br><hr><br>");
+
+	}
+
+	function print(output) {
+
+		document.write("<big>" + output + "</big>");
+		pulaLinha();
+
+	}
+
+	var anoAtual = 2016;
+	var idadeParaTerFilhos = 28;
+	var anoInicio = 1500;
+	var anosPassados = anoAtual - anoInicio;
+	var geracoes = anosPassados/idadeParaTerFilhos;
+
+	print("Nasceram " + Math.round(geracoes) + " gerações até hoje.");
+
+</script>

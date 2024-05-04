@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<title>Jogo Adivinha</title>
+	<script src="./js/script-jogo-adivinha.js" defer></script>
+</head>
+
+<body>
+	<div class="container2">
+		<div class="input">
+			<input id="chute" type="number" name="chute" min="0" max="10"></input>
+			<div class="setas">
+				<button id="setas" onclick="increment()">+</button>
+				<button id="setas" onclick="decrement()">-</button>
+			</div>
+			<button id="rodar">Verificar o chute</button>
+		</div>
+		<div class="botoes">
+			<button id="voltar">Voltar para a página inicial</button>
+			<button id="recarregar">Jogar novamente</button>
+		</div>
+	</div>
+</body>
+
+</html>

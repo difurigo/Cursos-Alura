@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<body>
+	<h1>Média das notas da classe</h1>
+</body>
+
+<script type="text/javascript">
+
+	function pulaLinha() {
+
+		document.write("<br><br>");
+	}
+
+	function print(texto) {
+
+		document.write(texto);
+		pulaLinha();
+	}
+
+	var totalAlunos = parseInt(prompt("Qual o total de alunos?"));
+
+	numero = 1;
+	totalNotas = 0;
+	while(numero <= totalAlunos) {
+		var nota = parseFloat(prompt("Informe a nota do aluno " + numero));
+		totalNotas += nota;
+		numero++;
+	}
+
+	mediaNotas = totalNotas/totalAlunos;
+	print("A média das notas é " + mediaNotas);
+
+</script>

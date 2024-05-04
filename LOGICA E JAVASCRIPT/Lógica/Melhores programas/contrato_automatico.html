@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Contrato Automático</title>
+	</head>
+
+	<script type="text/javascript">
+		function pulaLinha() {
+
+			document.write("<br>");
+		}
+
+		function print(texto) {
+
+			document.write(texto);
+			pulaLinha();
+			pulaLinha();
+		}
+
+		alert("Olá Sr. Rubens! Esse sistema gera contratos residenciais automaticamente! Clique em 'OK' para continuar.");
+		var quantidadeLocatarios = parseInt(prompt("Esse imóvel terá 1 ou 2 locatários?"));
+
+		while(true) {
+			if(quantidadeLocatarios == 1) {
+				var locatario = prompt("Qual o nome do(a) locatário(a):");
+				var profissao = prompt("Qual a profissão do(a) locatário(a):");
+				var rg = prompt("Qual o RG do(a) locatário(a):");
+				var cpf = prompt("Qual o CPF do(a) locatário(a):");
+
+				print("CONTRATO DE LOCAÇÃO RESIDENCIAL");
+				print("LOCADORES: RUBENS FURIGO, brasileiro, portador da cédula de identidade RG: nº 414184 SSP/SP, inscrito no CPF sob nº 049.162.398-49, casado com ALZIRA JUDITE FURIGO, portadora da cédula de identidade RG: nº W6544786DPMAFEX, inscrita no CPF sob nº 223.512.038-52, residentes e domiciliados na Estrada Municipal Miguele Petri nº 270 CEP 07662-100 – Terra Preta – Mairiporã SP.");
+				print("LOCATÁRIO(A): " + locatario.toUpperCase() + ", brasileiro(a), profissão " + profissao + ", portador(a) da cédula de identidade RG: " + rg + ", inscrito(a) no CPF sob nº " + cpf + ", que passará a residir no imóvel em questão e o terá como domicílio.");
+				break;
+			} else {
+				var casado = prompt("É casado(a)?");
+				if(casado == "Sim" || casado == "sim") {
+
+					var locatario = prompt("Qual o nome do(a) locatário(a):");
+					var profissaoLocatario = prompt("Qual a profissão do(a) locatário(a):");
+					var rg = prompt("Qual o RG do(a) locatário(a):");
+					var cpf = prompt("Qual o CPF do(a) locatário(a):");
+					var conjuge = prompt("Qual o nome do(a) cônjuge do(a) locatário(a):");
+					var profissaoConjuge = prompt("Qual a profissão do(a) cônjuge do(a) locatário(a):");
+					var rgConjuge = prompt("Qual o RG do(a) cônjuge do(a) locatário(a):");
+					var cpfConjuge = prompt("Qual o CPF do(a) locatário(a):");
+
+					print("CONTRATO DE LOCAÇÃO RESIDENCIAL");
+					print("LOCADORES: RUBENS FURIGO, brasileiro, portador da cédula de identidade RG: nº 414184 SSP/SP, inscrito no CPF sob nº 049.162.398-49, casado com ALZIRA JUDITE FURIGO, portadora da cédula de identidade RG: nº W6544786DPMAFEX, inscrita no CPF sob nº 223.512.038-52, residentes e domiciliados na Estrada Municipal Miguele Petri nº 270 CEP 07662-100 – Terra Preta – Mairiporã SP.");
+					print("LOCATÁRIOS(AS): " + locatario.toUpperCase() + ", brasileiro(a), profissão " + profissao + ", portador da cédula de identidade RG: " + rg + ", inscrito(a) no CPF sob nº " + cpf + ", casado(a) com " + conjuge.toUpperCase() + ", brasileiro(a), profissão " + profissaoConjuge + ", portador(a) da cédula de identidade RG: nº " + rgConjuge + ", inscrito(a) no CPF sob nº " + cpfConjuge + ", que passarão a residir no imóvel em questão e o terão como domicílio.");
+					break;
+				} else {
+					var uniaoOuOutro = prompt("Se ele não é casado, está em união estável com alguém?");
+					if(uniaoOuOutro == "Sim" || uniaoOuOutro == "sim") {
+
+						var locatario = prompt("Qual o nome do(a) locatário(a):");
+						var profissao = prompt("Qual a profissão do(a) locatário(a):");
+						var rg = prompt("Qual o RG do(a) locatário(a):");
+						var cpf = prompt("Qual o CPF do(a) locatário(a):");
+						var conjuge = prompt("Qual o nome do(a) cônjuge do(a) locatário(a):");
+						var profissaoConjuge = prompt("Qual a profissão do(a) cônjuge do(a) locatário(a):");
+						var rgConjuge = prompt("Qual o RG do(a) cônjuge do(a) locatário(a):");
+						var cpfConjuge = prompt("Qual o CPF do(a) locatário(a):");
+
+						print("CONTRATO DE LOCAÇÃO RESIDENCIAL");
+						print("LOCADORES: RUBENS FURIGO, brasileiro, portador da cédula de identidade RG: nº 414184 SSP/SP, inscrito no CPF sob nº 049.162.398-49, casado com ALZIRA JUDITE FURIGO, portadora da cédula de identidade RG: nº W6544786DPMAFEX, inscrita no CPF sob nº 223.512.038-52, residentes e domiciliados na Estrada Municipal Miguele Petri nº 270 CEP 07662-100 – Terra Preta – Mairiporã SP.");
+						print("LOCATÁRIOS(AS): " + locatario.toUpperCase() + ", brasileiro(a), profissão " + profissao + ", portador(a) da cédula de identidade RG: " + rg + ", inscrito(a) no CPF sob nº " + cpf + ", em união estável com " + conjuge.toUpperCase() + ", brasileiro(a), profissão " + profissaoConjuge + ", portador(a) da cédula de identidade RG: nº " + rgConjuge + ", inscrita no CPF sob nº " + cpfConjuge + ", que passarão a residir no imóvel em questão e o terão como domicílio.");
+						break;
+					} else {
+						var locatario = prompt("Qual o nome do(a) locatário(a):");
+						var profissao = prompt("Qual a profissão do(a) locatário(a):");
+						var rg = prompt("Qual o RG do(a) locatário(a):");
+						var cpf = prompt("Qual o CPF do(a) locatário(a):");
+						var outro = prompt("Qual o nome do(a) outro(a) locatário(a):");
+						var profissaoOutro = prompt("Qual a profissão do(a) outro(a) locatário(a):");
+						var rgOutro = prompt("Qual o RG do(a) outro(a) locatário(a):");
+						var cpfOutro = prompt("Qual o CPF do(a) outro(a) locatário(a):");
+
+						print("CONTRATO DE LOCAÇÃO RESIDENCIAL");
+						print("LOCADORES: RUBENS FURIGO, brasileiro, portador da cédula de identidade RG: nº 414184 SSP/SP, inscrito no CPF sob nº 049.162.398-49, casado com ALZIRA JUDITE FURIGO, portadora da cédula de identidade RG: nº W6544786DPMAFEX, inscrita no CPF sob nº 223.512.038-52, residentes e domiciliados na Estrada Municipal Miguele Petri nº 270 CEP 07662-100 – Terra Preta – Mairiporã SP.");
+						print("LOCATÁRIOS(AS): " + locatario.toUpperCase() + ", brasileiro(a), profissão " + profissao + ", portador(a) da cédula de identidade RG: " + rg + ", inscrito(a) no CPF sob nº " + cpf + ", --ALTERAR RELAÇÃO--' Ex: em união estável com' " + outro.toUpperCase() + ", brasileiro(a), profissão " + profissaoOutro + ", portador(a) da cédula de identidade RG: nº " + rgOutro + ", inscrita no CPF sob nº " + cpfOutro + ", que passarão a residir no imóvel em questão e o terão como domicílio.");
+						break;
+					}
+				}
+			}
+		}
+
+		confirm("Agora vamos para a cláusula OBJETO (Imóvel em questão)! Clique em 'OK' para continuar.");
+		while(true) {
+
+			break;
+		}
+
+	</script>
+
+	<body>
+	</body>
+
+</html>

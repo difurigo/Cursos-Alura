@@ -1,0 +1,6 @@
+break (Quebra) - <br> [Serve para pular uma linha]
+heading (Cabeçalho) - <h1></h1> [Serve para dar ênfaze no primeiro título]
+âncora - <a></a> [Serve para criar links na web]
+atributo href=""
+=> <meta charset="UTF-8"> [Dar pista de interpretação de caractéries]
+=> <meta name="viewport" content="width=device-width, initial-scale=1"> [Escala para dispositivos móveis]
