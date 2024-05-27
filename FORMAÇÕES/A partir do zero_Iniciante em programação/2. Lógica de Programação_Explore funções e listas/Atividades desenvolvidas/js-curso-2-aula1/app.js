@@ -17,6 +17,7 @@ function verificarChute() {
             let mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}!`; 
             exibirTexto('p', mensagemTentativas);
             document.getElementById("reiniciar").removeAttribute("disabled");
+            console.log(listaNumerosAleatorios);
     } else {
             if (chute > numeroSecreto) { 
                 exibirTexto ('p', 'O número secreto é menor');
@@ -28,8 +29,22 @@ function verificarChute() {
     }
 }
 
+let listaNumerosAleatorios = [];
 function gerarNumeroAleatorio() {
-    return parseInt((Math.random() * 10) + 1);
+    let numeroMaximo = 10;
+    let numeroGerado = parseInt((Math.random() * numeroMaximo) + 1);
+    let qtdElementosLista = listaNumerosAleatorios.length;
+
+    if (qtdElementosLista == numeroMaximo) {
+        listaNumerosAleatorios = [];
+    }    
+
+    if (listaNumerosAleatorios.includes(numeroGerado)) {
+        return gerarNumeroAleatorio();
+    } else {
+        listaNumerosAleatorios.push(numeroGerado);
+        return numeroGerado;
+    }
 }
 
 function exibirMensagemInicial() {
@@ -48,3 +63,4 @@ function novoJogo() {
 let tentativas = 1;
 let numeroSecreto = gerarNumeroAleatorio();
 exibirMensagemInicial();
+ 
