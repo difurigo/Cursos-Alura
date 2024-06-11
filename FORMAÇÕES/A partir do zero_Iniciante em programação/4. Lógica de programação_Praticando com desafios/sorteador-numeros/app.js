@@ -23,6 +23,17 @@ function sortear() {
     let numeroMinimo = parseInt(document.getElementById("de").value);
     let numeroMaximo = parseInt(document.getElementById("ate").value);
 
+    if (numeroMinimo >= numeroMaximo) {
+        alert('Campo "Do número" deve ser inferior ao campo "Até o número". Verifique os dados e tente novamente!');
+        return;
+    }
+
+    let rangeQuantidadeDeNumeros = numeroMaximo - numeroMinimo + 1;
+    if (rangeQuantidadeDeNumeros <= quantidadeDeNumeros) {
+        alert("A quantidade de números sorteados não pode ser menor que o intervalo entre os números requisitados! Verifique os dados e tente novamente!");
+        return;
+    }
+
     let listaNumerosAleatorios = [];
     let numeroGerado;
 
