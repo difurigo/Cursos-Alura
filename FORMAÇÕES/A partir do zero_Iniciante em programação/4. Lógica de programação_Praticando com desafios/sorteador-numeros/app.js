@@ -1,31 +1,50 @@
-let listaNumerosAleatorios = [];
+function alterarTexto(id, texto) {
+    let textoAlterado = document.getElementById(id);
+    textoAlterado.innerHTML = texto;
+}
+
 function sortearNumero(numeroMaximo, numeroMinimo) {
-    let numeroGerado = parseInt((Math.random() * numeroMaximo) + 1);
-    while (numeroGerado <= numeroMinimo) {
-        numeroGerado = parseInt((Math.random() * numeroMaximo) + 1);
+    return Math.floor(Math.random() * (numeroMaximo - numeroMinimo + 1)) + numeroMinimo;
+}
+
+function alterarStatusBotao(id) {
+    let botao = document.getElementById(id);
+    if (botao.classList.contains("container__botao-desabilitado")) {
+        botao.classList.remove("container__botao-desabilitado");
+        botao.classList.add("container__botao");
+    } else {
+        botao.classList.remove("container__botao");
+        botao.classList.add("container__botao-desabilitado");
     }
-    return numeroGerado;
 }
 
 function sortear() {
     let quantidadeDeNumeros = parseInt(document.getElementById("quantidade").value);
     let numeroMinimo = parseInt(document.getElementById("de").value);
     let numeroMaximo = parseInt(document.getElementById("ate").value);
-    let contador = 0;
 
-    while (contador < quantidadeDeNumeros) {
-        let numeroGerado = sortearNumero(numeroMaximo, numeroMinimo);
-        if (listaNumerosAleatorios.includes(numeroGerado)) {
+    let listaNumerosAleatorios = [];
+    let numeroGerado;
+
+    for (let i = 0; i < quantidadeDeNumeros; i++) {
+        numeroGerado = sortearNumero(numeroMaximo, numeroMinimo);
+        while (listaNumerosAleatorios.includes(numeroGerado)) {
             numeroGerado = sortearNumero(numeroMaximo, numeroMinimo);
-        } else {
-            listaNumerosAleatorios.push(numeroGerado);
         }
-        contador++;
+        listaNumerosAleatorios.push(numeroGerado);
     }
+    
+    alterarTexto("resultado", `<label class="texto__paragrafo">Números sorteados: ${listaNumerosAleatorios}</label>`);
+    
+    alterarStatusBotao("btn-sortear");
+    alterarStatusBotao("btn-reiniciar");
 }
 
-console.log(listaNumerosAleatorios);
-
 function reiniciar() {
-    document.getElementById("btn-reiniciar").setAttribute("disabled", true);
+    document.getElementById("quantidade").value = "";
+    document.getElementById("de").value = "";
+    document.getElementById("ate").value = "";
+    alterarTexto("resultado", `<label class="texto__paragrafo">Números sorteados: nenhum até agora</label>`);
+    alterarStatusBotao("btn-sortear");
+    alterarStatusBotao("btn-reiniciar");
 }
