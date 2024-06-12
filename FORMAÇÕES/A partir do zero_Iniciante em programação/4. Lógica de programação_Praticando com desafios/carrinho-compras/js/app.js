@@ -4,12 +4,18 @@ function adicionar() {
     // Recuperando os elementos
     let qtde = document.getElementById('quantidade').value;
     
-    if (qtde == '' || qtde == 0) {
+    if (isNaN(qtde) || qtde <= 0) {
         alert('Quantidade do produto não pode ser este valor. Favor verifique!');
         return;
     }
 
     let produto = document.getElementById('produto').value;
+
+    if (!produto || produto.trim() === "") {
+        alert("Selecione um produto válido.");
+        return;
+    }
+    
     let nomeProduto = produto.split(' -')[0];
     let valorUnitario = parseFloat(produto.split('R$')[1]);
     let subtotal = valorUnitario * qtde;
