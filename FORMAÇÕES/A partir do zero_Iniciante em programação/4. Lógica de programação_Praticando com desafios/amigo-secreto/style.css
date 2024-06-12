@@ -204,3 +204,7 @@ body {
   background-color: #fff;
   color: #1875e8;
 }
+
+.remove-amigo {
+  cursor: pointer;
+}
