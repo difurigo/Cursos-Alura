@@ -30,8 +30,8 @@ function adicionar() {
 }
 
 function sortear() {
-  if (amigos.length < 2) {
-    alert("É necessário ter pelo menos 2 amigos na lista!");
+  if (amigos.length < 4) {
+    alert("É necessário ter pelo menos 4 amigos na lista!");
     return;
   }
   embaralhar(amigos);
