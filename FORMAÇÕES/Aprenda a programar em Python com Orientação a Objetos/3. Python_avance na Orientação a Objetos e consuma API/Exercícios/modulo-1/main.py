@@ -20,9 +20,10 @@ moto_1 = Moto(marca='Yamaha', modelo='Cripton', tipo='casual')
 moto_2 = Moto(marca='Honda', modelo='XRE', tipo='casual')
 moto_3 = Moto(marca='BMW', modelo='S1000 RR', tipo='esportiva')
 
-carro_1 = Carro(marca='Ford', modelo='Ford KA', portas=4)
-carro_2 = Carro(marca='Ssangyong', modelo='Actyon', portas=4)
-carro_3 = Carro(marca='Chevrolet', modelo='Celta', portas=2)
+carro_1 = Carro(marca='Ford', modelo='Ford KA', portas=4, cor='Branco')
+carro_2 = Carro(marca='Ssangyong', modelo='Actyon', portas=4, cor='Preto')
+carro_2.ligar()
+carro_3 = Carro(marca='Chevrolet', modelo='Celta', portas=2, cor='Cinza Chumbo')
 
 # Exiba as Informações: Para cada instância, imprima no console as informações utilizando o método str.
 print(moto_1)
